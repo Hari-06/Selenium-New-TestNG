@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BDD Test Suite">
+    <listeners>
+        <listener class-name="listeners.ListenerClass"/>
+        <listener class-name="listeners.MethodInterceptor"/>
+        <listener class-name="listeners.AnnotationTransformer"/>
+    </listeners>
+
+    <test thread-count="1" name="test" parallel="methods">
+        <classes>
+            <class name="com.testCase.OrangeHRMTests"/>
+            <class name="com.testCase.GoogleTests"/>
+        </classes>
+    </test>
+</suite>
